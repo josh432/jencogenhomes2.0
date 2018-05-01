@@ -98,14 +98,13 @@ nav, .collapsible-header, .collapsible-body, #area, #areamap {
   font-family: "Playfair Display";
 }
 
- #map {
-        height: 400px;
-        width: 100%;
-      }
+#map {
+  height: 386px;
+  width: 100%;
+}
+
 
  
-
-
 </style>
 </head>
 
@@ -114,7 +113,7 @@ nav, .collapsible-header, .collapsible-body, #area, #areamap {
 	<div class="navbar-fixed">
   <nav class="nav">
     
-    <div class="nav-wrapper grey darken-4">
+    <div class="nav-wrapper grey darken-3">
       <div class="container">
       <a href="#" class="brand-logo center"><i class="fas fa-home"></i> Jen Cogen<br><span id="logo2">Realtor, MBA</span> </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons" style="color: #3399ff">menu</i></a>
@@ -180,7 +179,9 @@ nav, .collapsible-header, .collapsible-body, #area, #areamap {
     </li>
      <li>
       <div class="collapsible-header"><i class="material-icons">place</i>Moraga</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span><br>
+        <img class="responsive-img" src="./assets/moragachart.JPG">
+      </div>
     </li>
      <li>
       <div class="collapsible-header"><i class="material-icons">place</i>Orinda</div>
@@ -199,11 +200,30 @@ nav, .collapsible-header, .collapsible-body, #area, #areamap {
   </ul>
 
       </div>
+
+      <!--Begin map -->
       <div class="col s12 m6">
         <h5 class="center-align" id="areamap">Area Map</h5>
-        <div id="map"></div>
+        <div class="z-depth-2" id="map"></div>
       </div>
     </div>
+
+    <!--Begin button redirect & mortgage calc section -->
+
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="center-align">
+          <a href="http://cloudcma.com/api_widget/2c38d116f95d54c6288c6f5a6186bc3b/show?post_url=cloudcma.com&source_url=ua" target="_blank" class="zoom waves-effect waves-light btn-large grey darken-3"><span class="blue-text text-darken-2"><i class="material-icons right">monetization_on</i>What is my house worth?</a></span>
+        </div>
+        
+      </div>
+    
+
+    </div>
+
+
+
+
   </div>
 </div>
 
@@ -296,7 +316,7 @@ function scaleBannerVideoSize(element){
 <script>
   function initMap() {
     var options = {
-      zoom:8,
+      zoom:11,
       center:{lat:37.9101, lng:-122.0652}
     }
 
