@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css?family=Arimo|Glegoo|Playfair+Display" rel="stylesheet">
   <!-- Import JQuery -->
    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<!-- Compiled and minified CSS -->
+  <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <!--Optimize for mobile -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 
@@ -208,14 +208,36 @@ nav, .collapsible-header, #area, #areamap, .btn-large {
    });
 
 
+
+
   function initMap() {
     var options = {
       zoom:11,
-      center:{lat:37.9101, lng:-122.0652}
+      center:{lat:37.93, lng:-122.0700}
     }
 
     var map = new google.maps.Map(document.getElementById('map'), options);
+
+    // var marker = new google.maps.Marker({
+    //   position:{lat:37.9780, lng:-122.0311},
+    //   map:map
+    // });
+    addMarker({lat:37.9480, lng:-122.0608})
+    addMarker({lat:37.8771, lng:-122.1797})
+    addMarker({lat:37.8349, lng:-122.1297})
+    addMarker({lat:38.0194, lng:-122.1341})
+    addMarker({lat:37.8858, lng:-122.1180})
+    addMarker({lat:37.9101, lng:-122.0652})
+    addMarker({lat:37.9780, lng:-122.0311})
+    function addMarker(coords){
+      var marker = new google.maps.Marker({
+        position: coords,
+        map:map
+      });
+    }
   }
+
+
      
     </script>
 
