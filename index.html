@@ -99,9 +99,13 @@ ul#mobile-demo li a {
 
 nav, .collapsible-header, .collapsible-body, #area, .page-footer {
   font-family: "Playfair Display";
-  color: #3399ff;
+
 }
 
+
+#jen {
+  opacity: 0;
+}
 
 
 
@@ -164,7 +168,7 @@ nav, .collapsible-header, .collapsible-body, #area, .page-footer {
     <div class="row">
       <div class="center-align col s12">
     <h5 id="area">Why work with me?</h5>
-    <img class="circle responsive-img" src='./assets/jenportrait.jpg' width=100%><br>
+    <img class="circle responsive-img" id="jen" src='./assets/jenportrait.jpg' width=100%><br>
     <p>test</p>
 
     
@@ -226,6 +230,13 @@ nav, .collapsible-header, .collapsible-body, #area, .page-footer {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
  <script>
    $(document).ready(function(){
+
+     var options = [
+  
+    {selector: '#jen', offset: 300, callback: 'Materialize.fadeInImage("#jen")' }
+  ];
+  Materialize.scrollFire(options);
+
      $('.collapsible').collapsible();
    	 $(".button-collapse").sideNav({closeOnClick: true});
       scaleVideoContainer();
