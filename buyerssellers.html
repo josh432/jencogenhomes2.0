@@ -91,7 +91,7 @@ nav, .collapsible-header, #area, #areamap, .btn-large, .page-footer {
     </div>
   </nav>
 </div>
-<br><br><br><br>
+<br><br>
 <!--Begin mobile Navbar -->
 
         <ul class="side-nav grey darken-3" id="mobile-demo">
@@ -103,7 +103,28 @@ nav, .collapsible-header, #area, #areamap, .btn-large, .page-footer {
         <li><a href="#blog">Blog</a></li>
       </ul>
 
- <!--Content -->     
+ <!--Content --> 
+     <div class="parallax-container">
+      <div class="parallax"><img src="./assets/hills2.gif"></div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Parallax</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="./assets/hills3.jpg"></div>
+    </div> 
+       <div class="section white">
+      <div class="row container">
+        <h2 class="header">Parallax</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+      </div>
+    </div>
+      <div class="parallax-container">
+      <div class="parallax"><img src="./assets/hills.jpg"></div>
+    </div>
 
 
 
@@ -141,6 +162,7 @@ nav, .collapsible-header, #area, #areamap, .btn-large, .page-footer {
    $(document).ready(function(){
      $('.collapsible').collapsible();
      $(".button-collapse").sideNav({closeOnClick: true});
+     $('.parallax').parallax();
    });
 
 
