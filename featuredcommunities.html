@@ -85,6 +85,11 @@ p {
 
 <body>
   <!--Begin Navbar -->
+  <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="buyerssellers.html #buyers">Buyers</a></li>
+  <li><a href="buyerssellers.html #sellers">Sellers</a></li>
+</ul>  
   <div class="navbar-fixed">
   <nav class="nav">
     
@@ -95,13 +100,13 @@ p {
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons" style="color: #3399ff">menu</i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         
-        <li><a href="index.html" class="zoom">Home</a></li>
-        <li><a href="buyerssellers.html" class="zoom">Buyers/Sellers</a></li>
+        <li><a href="#" class="zoom">Home</a></li>
+        <li><a class="zoom dropdown-trigger" data-activates="dropdown1">Buyers/Sellers<i class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="#contact" class="zoom">Contact</a></li>
         
     </ul>
    <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#" class="zoom">Communities</a></li>
+        <li><a href="featuredcommunities.html" class="zoom">Communities</a></li>
         <li><a href="#blog" class="zoom">Blog</a></li>
       </ul>
     </div>
@@ -109,7 +114,7 @@ p {
     </div>
   </nav>
 </div>
-<br><br><br><br>
+
 <!--Begin mobile Navbar -->
 
         <ul class="side-nav grey darken-3" id="mobile-demo">
@@ -120,6 +125,7 @@ p {
         <li><a href="featuredcommunities.html">Communities</a></li>
         <li><a href="#blog">Blog</a></li>
       </ul>
+  <br><br>
 
 
    <!--Begin areas served -->
@@ -241,6 +247,7 @@ p {
    $(document).ready(function(){
      $('.collapsible').collapsible();
      $(".button-collapse").sideNav({closeOnClick: true});
+     $(".dropdown-trigger").dropdown();
    });
 
 

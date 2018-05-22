@@ -76,6 +76,11 @@ p {
 
 <body>
   <!--Begin Navbar -->
+  <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#buyers">Buyers</a></li>
+  <li><a href="#sellers">Sellers</a></li>
+</ul>  
   <div class="navbar-fixed">
   <nav class="nav">
     
@@ -87,7 +92,7 @@ p {
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         
         <li><a href="index.html" class="zoom">Home</a></li>
-        <li><a href="#" class="zoom">Buyers/Sellers</a></li>
+        <li><a class="zoom dropdown-trigger" href="#!" data-activates="dropdown1">Buyers/Sellers<i class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="#contact" class="zoom">Contact</a></li>
         
     </ul>
@@ -114,7 +119,7 @@ p {
 
  <!--Content --> 
      <div class="parallax-container">
-      <div class="parallax"><img src="./assets/hills2.gif"></div>
+      <div class="parallax section scrollspy" id="buyers"><img src="./assets/hills2.gif"></div>
     </div>
     <div class="section white">
       <div class="row container">
@@ -237,7 +242,7 @@ p {
                <p class="grey-text text-darken-3 lighten-3">
                We are ready to assist you should an unforeseen glitch pop up, even at this last stage. Something at the property breaks down, or some other minor detail – no need to worry. We have encountered these problems before so we know how to handle them efficiently and in a stress-free manner.</p>
 
-               <h5>Closing.</h5>
+               <h5>Closing</h5>
                <p class="grey-text text-darken-3 lighten-3">
                The closing agent will furnish all parties involved with a settlement statement, which summarizes and details the financial transactions enacted in the process. You and the seller(s) will sign this statement, as well as the closing agent, certifying its accuracy. If you are obtaining financing, you will have to sign all pertinent documentation required by the lending institution. If you are unable to attend the scheduled closing, arrangements can be made depending on the circumstances and the notice that we receive. If you are bringing funds to the transaction, you can elect to either have the funds wired electronically into the closing agent’s escrow account, or bring a certified bank check to the closing in the amount specified on the settlement statement. The seller should arrange to have all property keys and any other important information for you at the closing so that you may receive these items at this time.</p>
                <hr />
@@ -278,7 +283,7 @@ p {
       </div>
     </div>
     <div class="parallax-container">
-      <div class="parallax"><img src="./assets/hills3.jpg"></div>
+      <div class="parallax section scrollspy" id="sellers"><img src="./assets/hills3.jpg"></div>
     </div> 
        <div class="section white">
       <div class="row container">
@@ -330,9 +335,11 @@ p {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
  <script>
    $(document).ready(function(){
+     $(".dropdown-trigger").dropdown();
      $('.collapsible').collapsible();
      $(".button-collapse").sideNav({closeOnClick: true});
      $('.parallax').parallax();
+     $(".scrollspy").scrollSpy({scrollOffset: 0});
    });
 
 
