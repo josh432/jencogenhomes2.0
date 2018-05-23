@@ -47,6 +47,24 @@ ul#mobile-demo li a {
   color: #3399ff;
 }
 
+nav.navbar.shrink {
+  min-height: 35px;
+}
+
+nav.shrink a {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 15px;
+}
+
+nav.shrink .navbar-brand {
+  font-size: 25px;
+}
+
+nav.shrink .nav-wrapper {
+  padding-bottom: 75px;
+}
+
 
 
 .zoom {
@@ -246,6 +264,15 @@ p {
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
  <script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+          $('nav').addClass('shrink');
+        } else {
+          $('nav').removeClass('shrink');
+        }
+      });
+
+
    $(document).ready(function(){
      $('.collapsible').collapsible();
      $(".button-collapse").sideNav({closeOnClick: true});
